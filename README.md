@@ -21,7 +21,7 @@ On the deployed app, make sure to first create an account if you have not alread
 
 To view your list of saved books, click the "See Your Books" link on the top right of the page. Here you can delete books from the list. 
 
-[Click here for the deployed app.](https://book-search-engine-mern-rd.herokuapp.com/)
+
 
 ### Screenshots
 
