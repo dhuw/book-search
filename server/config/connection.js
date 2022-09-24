@@ -1,19 +1,8 @@
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 
-async function main() {
-  const uri = 'mongodb+srv://root:<password>@cluster0.j2pwhyp.mongodb.net/?retryWrites=true&w=majority'
-  const client = new MongoClient(uri);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/googlebooksdb', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-  try {
-    await client.connect();
-  }catch (e) {
-    console.error(e);
-  } finally {
-    await client.close();
-  }
-  
-}
-
-main().catch(console.error);
-
-module.exports = {MongoClient}.connection;
+module.exports = mongoose.connection;
