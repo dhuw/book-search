@@ -15,7 +15,7 @@ Originally an application that used RESTful for its requests, this assignment's 
 - React
 - Node.js
 - GraphQL
-    - Apollo Server
+- Apollo Server
 - JSON web tokens (JWT)
 
 ## Installation Instructions
