@@ -6,7 +6,7 @@ import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
-const httpLink = createHttpLink ({
+const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
@@ -25,7 +25,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -33,22 +32,22 @@ function App() {
         <>
           <Navbar />
           <Routes>
-            <Route 
-              path='/' 
-              element={<SearchBooks />} 
+            <Route
+              path='/'
+              element={<SearchBooks />}
             />
-            <Route 
-              path='/saved' 
-              element={<SavedBooks />} 
+            <Route
+              path='/saved'
+              element={<SavedBooks />}
             />
-            <Route 
+            <Route
               path='*'
               element={<h1 className='display-2'>Wrong page!</h1>}
             />
           </Routes>
         </>
       </Router>
-    </ApolloProvider>  
+    </ApolloProvider>
   );
 }
 
